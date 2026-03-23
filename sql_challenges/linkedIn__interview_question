@@ -1,0 +1,6 @@
+SELECT
+  candidate_id,
+  COUNT(skill) AS ile_ma_skilli
+FROM candidates
+WHERE skill IN ('Python', 'Tableau', 'PostgreSQL')
+GROUP BY candidate_id;
