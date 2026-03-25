@@ -1,0 +1,6 @@
+SELECT 
+pages.page_id
+FROM pages
+LEFT JOIN page_likes on pages.page_id = page_likes.page_id
+WHERE user_id is NULL
+GROUP BY pages.page_id
