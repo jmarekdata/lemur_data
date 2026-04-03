@@ -1,0 +1,15 @@
+WITH total_hours AS (
+SELECT 
+ag.age_bucket,
+  SUM(CASE WHEN ac.activity_type = 'send' THEN ac.time_spent ELSE 0 END) AS send_sum,
+  SUM(CASE WHEN ac.activity_type = 'open' THEN ac.time_spent ELSE 0 END) AS open_sum
+
+FROM activities as ac
+LEFT JOIN age_breakdown as ag ON ac.user_id = ag.user_id
+GROUP BY ag.age_bucket)
+
+SELECT
+age_bucket,
+ROUND(100.0 * send_sum / (send_sum + open_sum), 2) AS send_perc,
+ROUND(100.0 * open_sum / (send_sum + open_sum), 2) AS open_perc
+FROM total_hours
