@@ -9,7 +9,7 @@ The goal of this project is to showcase my ability to:
 * Think analytically about data aggregation and business logic.
 
 ## 📂 Project Structure
-The repository is organized by platform or source:
+The repository is organized by platform or source
 * `/sql_interview_challenges` – Solutions from "Ace the Data Science Interview".
 * `/linkedin_puzzles` – Daily SQL challenges found on LinkedIn.
 * `/datalemur` – Specific tasks from the DataLemur platform.
