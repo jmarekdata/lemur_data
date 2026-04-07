@@ -2,7 +2,7 @@
 
 Welcome to my personal repository where I document my journey through complex SQL problems. This project contains solutions to challenges from platforms like **DataLemur**, **Ace the Data Science Interview**, and **LinkedIn Daily SQL Puzzles**.
 
-## 🚀 Why this repository?
+## 🚀 Why this repository?   
 The goal of this project is to showcase my ability to:
 * Solve real-world data problems using advanced SQL techniques.
 * Write clean, readable, and optimized queries.
