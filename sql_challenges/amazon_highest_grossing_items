@@ -1,0 +1,24 @@
+WITH table1 AS (
+SELECT
+category,
+product,
+SUM(spend) as total_spend
+FROM product_spend 
+WHERE EXTRACT(YEAR FROM transaction_date) = 2022
+GROUP BY product,category
+)
+,
+table2 AS (
+SELECT 
+category,
+product,
+total_spend,
+RANK() OVER (PARTITION by category ORDER BY  total_spend DESC) as ranking
+FROM table1
+)
+
+SELECT category,
+product,
+total_spend
+FROM table2
+WHERE ranking <=2
