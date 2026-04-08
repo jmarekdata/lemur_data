@@ -4,5 +4,5 @@ manufacturer,
 SUM(cogs-total_sales) as loss
 FROM pharmacy_sales
 WHERE cogs>total_sales
-GROUP BY manufacturer
+GROUP BY manufacturer 
 ORDER BY loss DESC
