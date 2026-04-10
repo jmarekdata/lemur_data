@@ -1,7 +1,7 @@
 SELECT 
     EXTRACT(MONTH FROM submit_date) AS msc,
     product_id,
-    ROUND(AVG(stars), 2) AS rates
+    ROUND(AVG(stars), 2) AS rate
 FROM reviews 
 GROUP BY msc, product_id  
 ORDER BY msc, product_id;
