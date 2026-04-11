@@ -5,4 +5,3 @@ SELECT
 FROM reviews 
 GROUP BY msc, product_id  
 ORDER BY msc, product_id;
- 
