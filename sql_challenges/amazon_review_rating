@@ -4,4 +4,4 @@ SELECT
     ROUND(AVG(stars), 2) AS rate
 FROM reviews 
 GROUP BY msc, product_id  
-ORDER BY msc, product_id
+ORDER BY msc, product_id;
