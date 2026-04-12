@@ -1,0 +1,19 @@
+WITH ranking as (
+SELECT e.salary,
+e.name,
+d.department_name,
+DENSE_RANK() OVER(PARTITION BY e.department_id ORDER BY e.salary DESC) as rnk
+FROM employee as e
+LEFT JOIN department as d on e.department_id = d.department_id
+
+)
+SELECT 
+    department_name,
+    name,
+    salary
+FROM ranking
+WHERE rnk <= 3
+ORDER BY 
+    department_name ASC, 
+    salary DESC, 
+    name ASC;
