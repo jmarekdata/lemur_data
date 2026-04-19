@@ -12,3 +12,4 @@ FROM supercloud_cust
 WHERE product_count = (
   SELECT COUNT(DISTINCT product_category) FROM products
 );
+ 
