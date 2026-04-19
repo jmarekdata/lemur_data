@@ -7,7 +7,6 @@ WITH supercloud_cust AS (
     ON customers.product_id = products.product_id
   GROUP BY customers.customer_id
 )
-
 SELECT customer_id
 FROM supercloud_cust
 WHERE product_count = (
