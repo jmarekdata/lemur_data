@@ -7,7 +7,7 @@ as rnk
 FROM employee as e
 LEFT JOIN department as d on e.department_id = d.department_id
 )
-SELECT 
+SELECT  
     department_name,
     name,
     salary
